@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Drying | Mazal Die Casting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="service-pages.css">
+    <style>
+      .product-carousel { position:relative; height:220px; margin:0 0 18px; overflow:hidden; background:#fff; border:1px solid var(--line); }
+      .product .carousel-slide { position:absolute; inset:0; display:none; width:100%; height:100%; margin:0; border:0; object-fit:contain; }
+      .product .carousel-slide.active { display:block; }
+      .carousel-control { position:absolute; top:50%; z-index:2; width:32px; height:32px; border:0; border-radius:50%; background:#111; color:var(--orange); cursor:pointer; font-size:24px; line-height:1; transform:translateY(-50%); }
+      .carousel-control:hover { background:var(--pink); color:#111; }
+      .carousel-control.prev { left:10px; }.carousel-control.next { right:10px; }
+      .carousel-dots { position:absolute; z-index:2; bottom:10px; left:50%; display:flex; gap:6px; transform:translateX(-50%); }
+      .carousel-dot { width:7px; height:7px; padding:0; border:0; border-radius:50%; background:#bdbdbd; cursor:pointer; }.carousel-dot.active { background:var(--orange); }
+      @media (max-width:700px) { .product-carousel { height:190px; } }
+    </style>
+  </head>
+  <body>
+    <header class="wrap nav">
+      <a class="logo" href="index.html">
+        <img src="MazalDieCastingLogoWhite.png" alt="" onerror="this.style.display='none'" />
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="about.html">About us</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <div class="eyebrow" style="color:var(--lime)">Service 04</div>
+          <h1>Drying</h1>
+          <p>Durable, efficient components developed for drying equipment and systems where dependable performance matters.</p>
+        </div>
+      </section>
+      <section class="wrap products">
+        <div class="heading">
+          <div>
+          <div class="eyebrow">Service catalogue</div>
+          <h2>Drying Catalogue</h2>
+          </div>
+          <a class="back" href="index.html#services">← All services</a>
+        </div>
+        <div class="grid">
+          <article class="product">
+            <div class="product-carousel" aria-label="Drying rack photo gallery">
+              <img class="carousel-slide active" src="images/drying/CD1A_Fixed Type Rotary.jpg" alt="Fixed & Collapsible Rotary Driers" />
+              <img class="carousel-slide" src="images/drying/CD2A_Collapsible Rotary_2.jpg" alt="Fixed & Collapsible Rotary Driers" />
+              <img class="carousel-slide" src="images/drying/DR-04.jpg" alt="Fixed & Collapsible Rotary Driers detail" />
+              <button class="carousel-control prev" type="button" aria-label="Previous photo">‹</button><button class="carousel-control next" type="button" aria-label="Next photo">›</button>
+              <div class="carousel-dots"><button class="carousel-dot active" type="button" aria-label="Show photo 1"></button><button class="carousel-dot" type="button" aria-label="Show photo 2"></button><button class="carousel-dot" type="button" aria-label="Show photo 3"></button></div>
+            </div>
+            <span class="num">01</span>
+            <h3>Fixed & Collapsible Rotary Driers</h3>
+            <p>Durable, weatherproof drying racks designed for effortless use and years of carefree outdoor drying.</p>
+          </article>
+          <article class="product">
+            <div class="product-carousel" aria-label="Mounting bracket photo gallery">
+              <img class="carousel-slide active" src="images/drying/expandle1.jpg" alt="Expandle Free Standing Driers" />
+              <img class="carousel-slide" src="images/drying/expandle2.jpg" alt="Expandle Free Standing Driers" />
+              <img class="carousel-slide" src="images/drying/expandle3.jpg" alt="Expandle Free Standing Driers" />
+              <button class="carousel-control prev" type="button" aria-label="Previous photo">‹</button><button class="carousel-control next" type="button" aria-label="Next photo">›</button>
+              <div class="carousel-dots"><button class="carousel-dot active" type="button" aria-label="Show photo 1"></button><button class="carousel-dot" type="button" aria-label="Show photo 2"></button><button class="carousel-dot" type="button" aria-label="Show photo 3"></button></div>
+            </div>
+            <span class="num">02</span>
+            <h3>Expandle Free Standing Driers</h3>
+            <p>Cast brackets designed for secure, long-lasting equipment installation.</p>
+          </article>
+          <article class="product">
+            <div class="product-carousel" aria-label="System component photo gallery">
+              <img class="carousel-slide active" src="images/drying/dropdowndrier.png" alt="Drop Down Drier" />
+            </div>
+            <span class="num">03</span>
+            <h3>Drop Down Drier</h3>
+            <p>Precision parts for custom drying equipment and assemblies.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <section class="contact">
+      <div class="wrap contact-inner">
+        <h2>Need help finding a product?</h2>
+        <a class="button" href="index.html#contact">Contact Mazal →</a>
+      </div>
+    </section>
+    <footer>
+      <div class="wrap">© 2026 Mazal Die Casting. All rights reserved.</div>
+    </footer>
+    <script>
+      document.querySelectorAll('.product-carousel').forEach((carousel) => {
+        const slides = [...carousel.querySelectorAll('.carousel-slide')];
+        const dots = [...carousel.querySelectorAll('.carousel-dot')];
+        let current = 0;
+        let touchStart = 0;
+        const show = (next) => {
+          current = (next + slides.length) % slides.length;
+          slides.forEach((slide, index) => slide.classList.toggle('active', index === current));
+          dots.forEach((dot, index) => dot.classList.toggle('active', index === current));
+        };
+        carousel.querySelector('.prev').addEventListener('click', () => show(current - 1));
+        carousel.querySelector('.next').addEventListener('click', () => show(current + 1));
+        dots.forEach((dot, index) => dot.addEventListener('click', () => show(index)));
+        carousel.addEventListener('touchstart', (event) => { touchStart = event.changedTouches[0].screenX; }, { passive:true });
+        carousel.addEventListener('touchend', (event) => { const distance = event.changedTouches[0].screenX - touchStart; if (Math.abs(distance) > 40) show(current + (distance < 0 ? 1 : -1)); }, { passive:true });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Mazal Die Casting — precision aluminium and zinc die casting solutions." />
+    <title>Mazal Die Casting | Precision Made</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+:root {
+  --ink: #f5f5f5;
+  --paper: #414141;
+  --white: #fff;
+  --lime: #ffe600;
+  --pink: #f40078;
+  --orange: #ff7925;
+  --steel: #6b6b6b;
+  --line: #686868;
+  --dark: #4a4a4a;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Manrope,Arial,sans-serif;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.wrap {
+  width: min(1180px, calc(100% - 48px));
+  margin: auto;
+}
+.eyebrow {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #e0e0e0;
+  font: 500 11px/1.3 "DM Mono",monospace;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+.eyebrow:before {
+  content: "";
+  width: 22px;
+  height: 1px;
+  background: var(--orange);
+}
+header {
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+  color: white;
+}
+.nav {
+  height: 87px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,.22);
+}
+.logo { display: inline-flex; align-items: center; }
+.logo img { display: block; width: 175px; height: auto; }
+nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 18px;
+  font-weight: 600;
+}
+nav a {
+  opacity: .86;
+  transition: .2s;
+}
+nav a:hover {
+  opacity: 1;
+  color: var(--lime)
+}
+.nav-button {
+  padding: 11px 17px;
+  background: var(--lime);
+  color: var(--ink)!important;
+  opacity: 1!important
+}
+.menu {
+  display: none;
+  border: 0;
+  background: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+.hero {
+  min-height: 760px;
+  display: flex;
+  align-items: flex-end;
+  padding: 154px 0 68px;
+  color: #fff;
+  background: url('assets/hero-die-casting-machine.png') center/cover;
+}
+.hero-content {
+  max-width: 790px
+}
+.hero h1 {
+  font-size: clamp(48px,7vw,92px);
+  line-height: .98;
+  letter-spacing: -.075em;
+  margin: 19px 0 27px;
+  font-weight: 800
+}
+.hero p {
+  max-width: 530px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #e2e8e0;
+  margin: 0 0 36px
+}
+.cta {
+  display: inline-flex;
+  gap: 15px;
+  align-items: center;
+  background: var(--lime);
+  color: #111;
+  font-weight: 800;
+  font-size: 13px;
+  padding: 16px 20px;
+  transition: .2s
+}
+.cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px #0004
+}
+.arrow {
+  font-size: 19px;
+  line-height: 0
+}
+.hero-bottom {
+  margin-top: 74px;
+  display: flex;
+  gap: 44px;
+  font: 600 14px "DM Mono",monospace;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: #c7d0c8
+}
+.hero-bottom b {
+  color: var(--orange);
+  font-size: 19px;
+  font-weight: 700
+}
+.hero .eyebrow { color: var(--orange)!important; }
+.intro {
+  padding: 115px 0 90px;
+  display: grid;
+  grid-template-columns: 1fr 1.55fr;
+  gap: 90px;
+}
+.intro h2,.section-title {
+  font-size: clamp(32px,4vw,54px);
+  line-height: 1.08;
+  letter-spacing: -.06em;
+  margin: 18px 0 0
+}
+.intro p {
+  font-size: 18px;
+  line-height: 1.75;
+  margin: 0;
+  color: #e1e1e1
+}
+.text-link {
+  display: inline-flex;
+  margin-top: 28px;
+  font-size: 13px;
+  font-weight: 800;
+  border-bottom: 2px solid var(--lime);
+  padding-bottom: 5px
+}
+.stats {
+  background: #565656;
+  color: #fff
+}
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr)
+}
+.stat {
+  padding: 47px 28px;
+  border-right: 1px solid #38433b
+}
+.stat:first-child {
+  border-left: 1px solid #38433b
+}
+.stat strong {
+  display: block;
+  font-size: 43px;
+  letter-spacing: -.06em
+}
+.stat span {
+  font: 11px "DM Mono",monospace;
+  text-transform: uppercase;
+  color: #afbbb0;
+  letter-spacing: .06em
+}
+.services {
+  padding: 112px 0
+}
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 48px
+}
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line)
+}
+.service {
+  min-height: 280px;
+  padding: 28px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  transition: transform .25s ease,box-shadow .25s ease
+}
+.service:hover {
+  transform: translateY(-9px);
+  box-shadow: 0 16px 28px rgba(0,0,0,.28);
+  position: relative;
+  z-index: 1
+}
+.service-num {
+  font: 11px "DM Mono",monospace;
+  color: #7d8880
+}
+.service h3 {
+  font-size: 23px;
+  letter-spacing: -.05em;
+  margin: auto 0 12px
+}
+.service p {
+  font-size: 13px;
+  line-height: 1.65;
+  color: #dedede;
+  margin: 0
+}
+.service-icon {
+  font-size: 30px;
+  color: var(--pink);
+  text-align: right
+}
+.feature {
+  background: #4b4b4b;
+  padding: 30px 0
+}
+.feature-inner {
+  min-height: 410px;
+  padding: 52px;
+  display: flex;
+  align-items: flex-end;
+  background: linear-gradient(0deg,rgba(11,18,14,.76),rgba(11,18,14,.04)),url('https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&w=1800&q=85') center/cover;
+  color: #fff
+}
+.feature h2 {
+  font-size: clamp(31px,4vw,54px);
+  line-height: 1.05;
+  letter-spacing: -.06em;
+  max-width: 670px;
+  margin: 16px 0 0
+}
+.industries {
+  padding: 110px 0;
+  display: grid;
+  grid-template-columns: .85fr 1.5fr;
+  gap: 80px
+}
+.industry-list {
+  border-top: 1px solid var(--line)
+}
+.industry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -.035em
+}
+.industry span {
+  color: var(--orange);
+  font-size: 22px
+}
+.contact {
+  background: var(--pink);
+  color: #111;
+  padding: 112px 0
+}
+.contact-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px
+}
+.contact h2 {
+  font-size: clamp(52px,7vw,88px);
+  line-height: 1;
+  letter-spacing: -.07em;
+  margin: 14px 0 0;
+  max-width: 760px
+}
+.contact .cta {
+  background: #111;
+  color: var(--orange);
+  font-size: 16px;
+  padding: 20px 26px;
+  white-space: nowrap
+}
+.contact .eyebrow { color: #111!important; }
+.contact .eyebrow:before { background: #111; }
+footer {
+  background: #353535;
+  color: #d2d9d0;
+  padding: 52px 0 25px
+}
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 43px
+}
+.footer-top p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #aeb8af;
+  max-width: 270px
+}
+.footer-links {
+  display: flex;
+  gap: 65px
+}
+.footer-links div {
+  display: grid;
+  gap: 11px;
+  font-size: 12px
+}
+.footer-links strong {
+  color: #fff;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  margin-bottom: 4px
+}
+.footer-bottom {
+  border-top: 1px solid #344038;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font: 10px "DM Mono",monospace;
+  color: #8d998f
+}
+@media(max-width:900px) and (min-width:701px) {
+  .service-grid {
+    grid-template-columns: 1fr 1fr
+  }
+}
+@media(max-width:700px) {
+  .wrap {
+    width: min(100% - 34px,1180px)
+  }
+  .nav {
+    height: 70px
+  }
+  nav {
+    display: none
+  }
+  .menu {
+    display: block
+  }
+  .hero {
+    min-height: 660px;
+    padding: 135px 0 38px;
+    background-position: 63% center
+  }
+  .hero h1 {
+    font-size: 55px
+  }
+  .hero p {
+    font-size: 15px
+  }
+  .hero-bottom {
+    margin-top: 55px;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-size: 11px
+  }
+  .intro,.industries {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 75px 0
+  }
+  .intro p {
+    font-size: 16px
+  }
+  .stat-grid {
+    grid-template-columns: 1fr 1fr
+  }
+  .stat {
+    padding: 28px 17px;
+    border-bottom: 1px solid #38433b
+  }
+  .stat:nth-child(3) {
+    border-left: 1px solid #38433b
+  }
+  .stat strong {
+    font-size: 32px
+  }
+  .services {
+    padding: 75px 0
+  }
+  .section-head {
+    align-items: start
+  }
+  .section-head .text-link {
+    display: none
+  }
+  .service-grid {
+    grid-template-columns: 1fr
+  }
+  .service {
+    min-height: 195px
+  }
+  .feature {
+    padding: 18px 0
+  }
+  .feature-inner {
+    min-height: 350px;
+    padding: 28px
+  }
+  .contact {
+    padding: 82px 0
+  }
+  .contact-inner,.footer-top {
+    align-items: flex-start;
+    flex-direction: column
+  }
+  .footer-links {
+    gap: 42px
+  }
+  .footer-bottom {
+    gap: 15px;
+    flex-direction: column
+  }
+  .mobile-nav {
+    display: flex!important;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    padding: 22px 24px;
+    background: var(--dark);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px
+  }
+  .mobile-nav .nav-button {
+    width: 100%;
+    text-align: center
+  }
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap nav">
+        <a class="logo" href="#top" aria-label="Mazal Die Casting"><img src="assets/MazalDieCastingLogoWhite.png" alt="" onerror="this.style.display='none'" /></a>
+        <nav id="nav">
+          <a href="#top">Home</a>
+          <a href="about.html">About us</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="menu" aria-label="Open menu" onclick="document.getElementById('nav').classList.toggle('mobile-nav')">☰</button>
+      </div>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <div class="wrap">
+          <div class="eyebrow" style="color:var(--lime)">Precision engineering since 1984</div>
+          <div class="hero-content">
+            <h1>Built with precision.<br>Made to perform.</h1>
+            <p>From concept to component, Mazal delivers dependable aluminium and zinc die-casting solutions for the industries that keep the world moving.</p>
+            <a class="cta" href="#services">Explore our services <span class="arrow">↗</span>
+          </a>
+        </div>
+        <div class="hero-bottom">
+          <span>
+            <b>01</b> Engineering excellence</span>
+            <span>
+              <b>02</b> Quality without compromise</span>
+              <span>
+                <b>03</b> Delivered on time</span>
+              </div>
+            </div>
+          </section>
+          <section class="wrap intro" id="about">
+            <div>
+              <div class="eyebrow">The Mazal standard</div>
+              <h2>Complex parts.<br>Clear thinking.</h2>
+            </div>
+            <div>
+              <p>We turn challenging designs into high-performing cast components. Our experience, technical rigour and responsive approach make us a trusted manufacturing partner from first drawing through to final delivery.</p>
+              <a class="text-link" href="#services">Discover our capabilities →</a>
+            </div>
+          </section>
+          <section class="stats">
+            <div class="wrap stat-grid">
+              <div class="stat">
+                <strong>40+</strong>
+                <span>Years of expertise</span>
+              </div>
+              <div class="stat">
+                <strong>99.5%</strong>
+                <span>Quality rate</span>
+              </div>
+              <div class="stat">
+                <strong>24/7</strong>
+                <span>Production capability</span>
+              </div>
+              <div class="stat">
+                <strong>100%</strong>
+                <span>Partner focused</span>
+              </div>
+            </div>
+          </section>
+          <section class="wrap services" id="services">
+            <div class="section-head">
+              <div>
+                <div class="eyebrow">Our services</div>
+                <h2 class="section-title">Capability, in every detail.</h2>
+              </div>
+              <a class="text-link" href="#contact">Contact our team →</a>
+            </div>
+            <div class="service-grid">
+              <a class="service" href="die-casting.html">
+                <div class="service-num">01</div>
+                <div class="service-icon">◒</div>
+            <h3>Die Casting Catalogue</h3>
+                <p>Precision aluminium and zinc components made with consistency at volume.</p>
+              </a>
+              <a class="service" href="gardening.html">
+                <div class="service-num">02</div>
+                <div class="service-icon">♧</div>
+            <h3>Gardening Catalogue</h3>
+                <p>Robust, purpose-made cast components for outdoor and garden applications.</p>
+              </a>
+              <a class="service" href="building.html">
+                <div class="service-num">03</div>
+                <div class="service-icon">▣</div>
+            <h3>Building Catalogue</h3>
+                <p>Dependable cast products engineered for demanding building environments.</p>
+              </a>
+              <a class="service" href="drying.html">
+                <div class="service-num">04</div>
+                <div class="service-icon">☼</div>
+            <h3>Drying Catalogue</h3>
+                <p>Efficient, durable components designed to support drying systems and equipment.</p>
+              </a>
+            </div>
+          </section>
+          <section class="feature">
+            <div class="wrap feature-inner">
+              <div>
+                <div class="eyebrow" style="color:var(--lime)">A better way to manufacture</div>
+                <h2>Reliable production begins long before the first pour.</h2>
+              </div>
+            </div>
+          </section>
+          <section class="wrap industries" id="industries">
+            <div>
+              <div class="eyebrow">Who we serve</div>
+              <h2 class="section-title">Made for demanding industries.</h2>
+            </div>
+            <div class="industry-list">
+              <div class="industry">Automotive <span>↗</span>
+            </div>
+            <div class="industry">Electrical & Energy <span>↗</span>
+          </div>
+          <div class="industry">Industrial Equipment <span>↗</span>
+        </div>
+        <div class="industry">Consumer Products <span>↗</span>
+      </div>
+    </div>
+  </section>
+  <section class="contact" id="contact">
+    <div class="wrap contact-inner">
+      <div>
+        <div class="eyebrow" style="color:#536315">Let’s make it happen</div>
+        <h2>Have a project in mind?</h2>
+      </div>
+      <a class="cta" href="mailto:info@mazaldiecasting.com">Get in touch <span class="arrow">↗</span>
+    </a>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <span class="footer-name">Mazal Die Casting</span>
+        <p>Precision die-casting solutions, built for the real world.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <strong>Explore</strong>
+            <a href="#top">Home</a>
+            <a href="about.html">About us</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div>
+          <strong>Contact</strong>
+          <a href="mailto:john@mazal.za.net">john@mazal.za.net</a>
+          <a href="tel:+27 21 931 5177">+27 21 931 5177</a>
+          <a href="cell:+27 84 620 5057">+27 84 620 5057</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Mazal Die Casting. All rights reserved.</span>
+      <span>Precision made.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
